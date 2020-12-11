@@ -10,8 +10,9 @@ mongoose.connect(keys.mongoURI);
 
 const app = express(); //generating new application called app
 
+//app.use : middlewares
 app.use(
-  cookieSession({
+  cookieSession({//cookieSession stores all the relavant data into the session (vs. experessSession stores only sessionID)
     maxAge: 30 * 24 * 60 * 60 * 1000, //30 days in millisecond
     keys: [keys.cookieKey] //encrypt cookies
   })
