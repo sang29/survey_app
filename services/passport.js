@@ -22,7 +22,7 @@ passport.use(
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
       callbackURL: '/auth/google/callback',
-      proxy: true //ask google to trust the proxy(heroku) server
+      proxy: true, //ask google to trust the proxy(heroku) server
     },
     (accessToken, refreshToken, profile, done) => {
       //check if the same id already exists in the database
