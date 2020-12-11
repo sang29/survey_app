@@ -7,9 +7,9 @@ require('./models/User');
 require('./services/passport');
 
 mongoose.connect(keys.mongoURI);
-
+console.log("Directing to mongoURI");
 const app = express(); //generating new application called app
-
+console.log("Express App created");
 //app.use : middlewares
 app.use(
   cookieSession({//cookieSession stores all the relavant data into the session (vs. experessSession stores only sessionID)
